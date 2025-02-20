@@ -253,6 +253,7 @@ describe "/photos/[ID]" do
     first_comment = Comment.new
     first_comment.author_id = first_commenter.id
     first_comment.photo_id = photo.id
+    first_comment.body = "cool pic"
     first_comment.save
 
     second_commenter = User.new
@@ -262,6 +263,7 @@ describe "/photos/[ID]" do
     second_comment = Comment.new
     second_comment.author_id = second_commenter.id
     second_comment.photo_id = photo.id
+    second_comment.body = "wow really nice"
     second_comment.save
 
     visit "/photos/#{photo.id}"
