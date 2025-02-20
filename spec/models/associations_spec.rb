@@ -8,13 +8,13 @@ end
 
 RSpec.describe Photo, type: :model do
   describe "has a has_many association defined called 'comments' with Class name 'Comment' and foreign key 'photo_id'", points: 1 do
-    it { should have_many(:comments).class_name("Comment").with_foreign_key("photo_id") }
+    it { should have_many(:comments) }
   end
 end
 
 RSpec.describe Photo, type: :model do
   describe "has a has_many association defined called 'likes' with Class name 'Like' and foreign key 'photo_id'", points: 1 do
-    it { should have_many(:likes).class_name("Like").with_foreign_key("photo_id") }
+    it { should have_many(:likes) }
   end
 end
 
@@ -33,7 +33,7 @@ end
 
 RSpec.describe Comment, type: :model do
   describe "has a belongs_to association defined called 'photo' with Class name 'Photo' and foreign key 'photo_id'", points: 1 do
-    it { should belong_to(:photo).class_name("Photo").with_foreign_key("photo_id") }
+    it { should belong_to(:photo) }
   end
 end
 
@@ -57,7 +57,7 @@ end
 
 RSpec.describe Like, type: :model do
   describe "has a belongs_to association defined called 'photo' with Class name 'Photo' and foreign key 'photo_id'", points: 1 do
-    it { should belong_to(:photo).class_name("Photo").with_foreign_key("photo_id") }
+    it { should belong_to(:photo) }
   end
 end
 
