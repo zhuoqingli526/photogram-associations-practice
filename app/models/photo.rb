@@ -31,4 +31,5 @@ class Photo < ApplicationRecord
   ## Indirect associations
 
   # Photo#fans: returns rows from the users table associated to this photo through its likes
+  has_many(:fans, through: :likes, source: :fan)
 end
